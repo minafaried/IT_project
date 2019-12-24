@@ -7,7 +7,10 @@
     <title>Sign Up</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="sign-up.css" />
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script src="signupvalidation.js"></script>
     <script src="main.js"></script>
+
 </head>
 
 <body>
@@ -21,20 +24,24 @@
     </div>
 
     <div class="SignUp">
-        <form class="sign-up" name="sign-up" action="" method="POST">
+        <form class="sign-up" name="sign-up" action="" method="POST" id="sign-up" onsubmit="return validatesignup()">
             <fieldset>
                 <legend>Sign-up form</legend>
                 <label class="label">Username</label>
-                <input class="input" type="text" name="username" placeholder="Type your Username">
+                <input class="input" type="text" name="username" placeholder="Type your Username" id="username">
+                <div id="usernameerror" class="error"></div>
                 <br>
                 <label class="label">Email</label>
-                <input class="input" type="text" name="email" placeholder="Type your Email">
+                <input class="input" type="text" name="email" placeholder="Type your Email" id="email">
+                <div id="emailerror" class="error"></div>
                 <br>
                 <label class="label">Password</label>
-                <input class="input" type="password" name="password" placeholder="Type your Password">
+                <input class="input" type="password" name="password" placeholder="Type your Password" id="password">
+                <div id="passerror" class="error"></div>
                 <br>
                 <label class="label">Phone</label>
-                <input class="input" type="text" name="phone" placeholder="Type your Phone number">
+                <input class="input" type="text" name="phone" placeholder="Type your Phone number" id="phone">
+                <div id="phoneerror" class="error"></div>
                 <br>
                 <input class="submit" type="submit" value="Sign-up">
             </fieldset>

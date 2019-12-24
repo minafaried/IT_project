@@ -1,14 +1,12 @@
-body{
-
-    background: url("Background2.jpg") no-repeat center center fixed; 
+body {
+    background: url("Background2.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 
-
-.label{
+.label {
     width: 180px;
     display: inline-block;
     font-size: 40px;
@@ -16,16 +14,18 @@ body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.input , .submit{  
+.input,
+.submit {
     padding: 15px;
     margin: 5px;
 }
-input{
+
+input {
     border-radius: 30px;
     font-size: 30px;
 }
 
-.submit{
+.submit {
     font-size: 40px;
     position: relative;
     left: 35%;
@@ -35,20 +35,20 @@ input{
     background-color: rgb(243, 243, 243);
 }
 
-legend{
+legend {
     font-size: 70px;
     font-family: cursive;
     color: white;
 }
 
-.sign-up{
+.sign-up {
     position: absolute;
     top: 20%;
     left: 5%;
     right: 50%;
 }
 
-fieldset{
+fieldset {
     width: 700px;
     height: 550px;
     border: dashed 1px yellow;
@@ -64,7 +64,7 @@ fieldset{
     top: 7%;
     border-radius: 10px;
 }
-  
+
 .topnav a {
     float: left;
     color: #f2f2f2;
@@ -77,23 +77,29 @@ fieldset{
     right: 5%;
     width: 50px;
 }
-  
+
 .topnav a:hover {
     background-color: #ddd;
     color: black;
-    
 }
-  
+
 .topnav a.active {
-    background-color:#f8c26c;
+    background-color: #f8c26c;
     color: white;
 }
 
-.h1{
+.h1 {
     position: absolute;
     left: 7%;
     top: 2%;
     font-size: 50px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: rgb(250, 204, 0);
+}
+
+.error {
+    position: relative;
+    left: 45%;
+    color: rgb(212, 33, 33);
+    font-size: 20px;
 }

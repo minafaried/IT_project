@@ -7,7 +7,9 @@
     <title>Log in</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="Login.css" />
-    <script src="main.js"></script>
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script src="Loginvalidate.js"></script>
+
 </head>
 
 <body>
@@ -21,14 +23,16 @@
     </div>
 
     <div class="LogIn">
-        <form class="login" name="login" action="" method="POST">
+        <form id="loginform" class="login" name="login" action="" method="POST" onsubmit="return validatelogin()">
             <fieldset>
                 <legend>Log in</legend>
                 <label class="label">Email</label>
-                <input class="input" type="text" name="email" placeholder="Type your Email">
+                <input class="input" type="text" name="email" placeholder="Type your Email" id="email">
+                <div id="emailerror" class="error"></div>
                 <br>
                 <label class="label">Password</label>
-                <input class="input" type="password" name="password" placeholder="Type your Password">
+                <input class="input" type="password" name="password" placeholder="Type your Password" id="password">
+                <div id="passerror" class="error"></div>
                 <br>
                 <input class="submit" type="submit" value="Log in">
             </fieldset>
