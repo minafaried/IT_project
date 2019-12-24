@@ -12,7 +12,7 @@ function validatesignup() {
     var emailreg = new RegExp();
     emailreg = /[a-z0-9_\.\-]+@+[a-z0-9_\.\-]+\.+(com|net|org)/i; //mony_faried68@yahoo.com 
     var phonereg = new RegExp();
-    phonereg = /[0-9]/;
+    phonereg = /[^0-9]/;
     emailerror.innerText = "";
     passerror.innerText = "";
     nameerror.innerHTML = "";
@@ -27,7 +27,7 @@ function validatesignup() {
         // alert("password is empty");
         passerror.innerText = "the password must be more than 10 charcter";
         return false;
-    } else if (!phonereg.test(phone) || phone.length != 11) {
+    } else if (phonereg.test(phone) || phone.length != 11) {
         phoneerror.innerText = "invalid phone numper(11 digit)";
         return false;
     } else {
