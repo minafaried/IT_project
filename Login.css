@@ -27,9 +27,12 @@ input {
 
 .submit {
     font-size: 40px;
-    position: relative;
-    left: 35%;
+    position: absolute;
+    top: 70%;
+    left: 45%;
     margin-top: 20px;
+    width: 150px;
+    height: 80px;
     border-bottom: solid 15px gold;
     border-radius: 30px;
     background-color: rgb(243, 243, 243);
@@ -63,6 +66,7 @@ fieldset {
     right: 7%;
     top: 7%;
     border-radius: 10px;
+    position: fixed;
 }
 
 .topnav a {
