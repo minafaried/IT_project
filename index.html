@@ -8,21 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
-    <script src="main.js"></script>
+    <script src="Bonus JQuery.js"></script>
     <script>
-        function gotosignin() {
-            $(function() {
-                window.location.replace("Sign-up.html");
-            }, 0)
-        }
-
-        function gotologin() {
-
-            $(function() {
-                window.location.replace("Login.html");
-            }, 0)
-        }
     </script>
+
 </head>
 
 <body>
@@ -36,11 +25,11 @@
 
     <div class="form">
         <form class="buttonsAction" name="Select" action="" method="POST">
-            <button class="buttons" name="Sign-up" onclick="gotosignin()">Sign Up</button>
+            <button class="buttons" name="Sign-up" onclick="gotosignup()">Sign Up</button>
             <br>
             <button class="buttons" name="login" onclick="gotologin()">Log in</button>
             <br>
-            <button class="buttons" name="skip">Skip</button>
+            <button class="buttons" name="skip" onclick="gotoHome()">Skip</button>
         </form>
     </div>
 
