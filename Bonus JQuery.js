@@ -12,6 +12,7 @@ $(function(){
 
 $(function(){  // Just To Show the JQuery Effects...
     $("h1").fadeIn(6000);
+    $("button").fadeIn(3000);
 })
 
 function gotosignup() {
