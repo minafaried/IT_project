@@ -24,6 +24,7 @@ body{
     right: 7%;
     top: 7%;
     border-radius: 10px;
+    position: fixed;
 }
   
 .topnav a {
@@ -35,6 +36,7 @@ body{
     font-size: 17px;
     float: right;
     position: relative;
+    
     right: 5%;
     width: 50px;
 }
