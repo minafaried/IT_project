@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Buy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="Buy.css" />
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script src="Loginvalidate.js"></script>
+    <script src="Bonus JQuery.js"></script>
+
+</head>
+
+<body>
+
+    <h1 class="h1">Online Phones</h1>
+    <div class="topnav">
+        <a href="#about" onclick="gotoAbout()">About</a>
+        <a href="#contact"  onclick="gotoContact()">Contact</a>
+        <a href="#home"  onclick="gotoHome()">Home</a>
+        <a class="active" href="#forms">Forms</a>
+    </div>
+
+    <div class="LogIn">
+        <form id="loginform" class="login" name="login" action="" method="POST" onsubmit="return validatelogin()">
+            <fieldset>
+                <legend>Buy</legend>
+                <label class="label">Credit</label>
+                <input class="input" type="text" name="Credit" placeholder="Type your Credit Number" id="email">
+                <div id="CreditError" class="error"></div>
+                <br>
+                <label class="label">Phone</label>
+                <input class="input" type="text" name="phone" placeholder="Type your phone number" id="phone">
+                <div id="phoneError" class="error"></div>
+                <br>
+                <input class="submit" type="submit" value="Buy">
+            </fieldset>
+        </form>
+    </div>
+
+</body>
+
+</html>
