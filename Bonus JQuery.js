@@ -33,3 +33,22 @@ function gotoHome() {
         window.location.replace("Home/Home.html");
     }, 0)
 }
+
+function gotoContact() {
+
+    $(function () {
+        window.location.replace("Contact.html");
+    }, 0)
+}
+function gotoAbout() {
+
+    $(function () {
+        window.location.replace("About.Html");
+    }, 0)
+}
+function gotoForms() {
+
+    $(function () {
+        window.location.replace("index.html");
+    }, 0)
+}
