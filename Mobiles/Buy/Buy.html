@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="Buy.css" />
     <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
-    <script src="Loginvalidate.js"></script>
+    <script src="Buyvalidation.js"></script>
     <script src="Bonus JQuery.js"></script>
 
 </head>
@@ -18,17 +18,17 @@
     <h1 class="h1">Online Phones</h1>
     <div class="topnav">
         <a href="#about" onclick="gotoAbout()">About</a>
-        <a href="#contact"  onclick="gotoContact()">Contact</a>
-        <a href="#home"  onclick="gotoHome()">Home</a>
+        <a href="#contact" onclick="gotoContact()">Contact</a>
+        <a href="#home" onclick="gotoHome()">Home</a>
         <a class="active" href="#forms">Forms</a>
     </div>
 
-    <div class="LogIn">
-        <form id="loginform" class="login" name="login" action="" method="POST" onsubmit="return validatelogin()">
+    <div class="BuyForm">
+        <form id="buyform" class="buyform" name="buyform" action="" method="POST" onsubmit="return validatebuy()">
             <fieldset>
                 <legend>Buy</legend>
                 <label class="label">Credit</label>
-                <input class="input" type="text" name="Credit" placeholder="Type your Credit Number" id="email">
+                <input class="input" type="text" name="Credit" placeholder="Type your Credit Number" id="Credit">
                 <div id="CreditError" class="error"></div>
                 <br>
                 <label class="label">Phone</label>

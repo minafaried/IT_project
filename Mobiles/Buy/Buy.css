@@ -28,7 +28,7 @@ input {
 .submit {
     font-size: 40px;
     position: absolute;
-    top: 70%;
+    top: 75%;
     left: 35%;
     margin-top: 20px;
     width: 150px;
@@ -44,7 +44,7 @@ legend {
     color: white;
 }
 
-.login {
+.buyform {
     position: absolute;
     top: 30%;
     left: 5%;
