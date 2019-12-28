@@ -9,16 +9,11 @@ $connectioni=new mysqli("localhost","root","","it");
 $q = "INSERT INTO user(`username`,`email`,`password`,`phone`,`adminCode`) 
 VALUES ('$user_name','$email','$password','$phone','$admin_code')";
 
-if ($connectioni->query($q) === TRUE) {
+if ($connectioni->query($q) == TRUE) {
     session_start();
     $_SESSION['username'] = $user_name;
-    echo "<script>
-    alert('Registertion is completed');
-    window.location.href='Home.html';
-    </script>";
+    header("Location:http://localhost:8080/project/IT_project/Home/home.php");
 } else {
-    echo "<script>
-    alert('Registertion is failed, this username is existed');
-    window.location.href='Sign-up.html';
-    </script>";
+    header("Location:http://localhost:8080/project/IT_project/Sign-up.html");
+
 }

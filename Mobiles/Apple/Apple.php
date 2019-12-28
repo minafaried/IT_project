@@ -1,3 +1,6 @@
+<?php
+$admin=$_GET["admin"];
+?>
 <!DOCTYPE html>
 <html>
 
@@ -7,7 +10,16 @@
     <title>Apple</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="Apple.css" />
-    <script src="main.js"></script>
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var x="<?php echo $admin?>";
+            if(x =="false")
+            {
+                $(".edit").hide();
+            }
+        });
+    </script>
 </head>
 
 <body>
@@ -30,9 +42,7 @@
                         Gray
                         26,000 EGY</pre>
                     <button class="buy">Buy</button><br>
-                    <button class="add">Add</button>
-                    <button class="edit">Edit</button>
-                    <button class="delete">Delete</button>
+                    <button class="edit" class="edit" name="edit">Edit</button>
                     <br>
                     <br>
                 </div>
@@ -47,9 +57,7 @@
                         Gray
                         18,500 EGY</pre>
                     <button class="buy">Buy</button><br>
-                    <button class="add">Add</button>
-                    <button class="edit">Edit</button>
-                    <button class="delete">Delete</button>
+                    <button class="edit" class="edit" name="edit">Edit</button>
                     <br>
                     <br>
                 </div>
@@ -64,9 +72,7 @@
                             Black
                             12,800 EGY</pre>
                     <button class="buy">Buy</button><br>
-                    <button class="add">Add</button>
-                    <button class="edit">Edit</button>
-                    <button class="delete">Delete</button>
+                    <button class="edit" class="edit" name="edit">Edit</button>
                     <br>
                     <br>
                 </div>
@@ -81,9 +87,7 @@
                                 Gray
                                 5,900 EGY</pre>
                     <button class="buy">Buy</button><br>
-                    <button class="add">Add</button>
-                    <button class="edit">Edit</button>
-                    <button class="delete">Delete</button>
+                    <button class="edit" class="edit" name="edit">Edit</button>
                     <br>
                     <br>
                 </div>
@@ -101,9 +105,7 @@
                             Gray
                             11,000 EGY</pre>
                     <button class="buy">Buy</button><br>
-                    <button class="add">Add</button>
-                    <button class="edit">Edit</button>
-                    <button class="delete">Delete</button>
+                    <button class="edit" class="edit" name="edit">Edit</button>
                     <br>
                     <br>
                 </div>
@@ -118,9 +120,7 @@
                                     Gold
                                     11,000 EGY</pre>
                     <button class="buy">Buy</button><br>
-                    <button class="add">Add</button>
-                    <button class="edit">Edit</button>
-                    <button class="delete">Delete</button>
+                    <button class="edit" class="edit" name="edit">Edit</button>
                     <br>
                     <br>
                 </div>
@@ -135,9 +135,7 @@
                                 Black
                                 7,700 EGY</pre>
                     <button class="buy">Buy</button><br>
-                    <button class="add">Add</button>
-                    <button class="edit">Edit</button>
-                    <button class="delete">Delete</button>
+                    <button class="edit" class="edit" name="edit">Edit</button>
                     <br>
                     <br>
                 </div>
@@ -152,9 +150,7 @@
                                     Gold
                                     4,700 EGY</pre>
                     <button class="buy">Buy</button><br>
-                    <button class="add">Add</button>
-                    <button class="edit">Edit</button>
-                    <button class="delete">Delete</button>
+                    <button class="edit" class="edit" name="edit">Edit</button>
                     <br>
                     <br>
                 </div>
@@ -171,9 +167,7 @@
                                 Gray
                                 6,800 EGY</pre>
                     <button class="buy">Buy</button><br>
-                    <button class="add">Add</button>
-                    <button class="edit">Edit</button>
-                    <button class="delete">Delete</button>
+                    <button class="edit" class="edit" name="edit">Edit</button>
                     <br>
                     <br>
                 </div>
@@ -188,9 +182,7 @@
                                         Gold
                                         6,800 EGY</pre>
                     <button class="buy">Buy</button><br>
-                    <button class="add">Add</button>
-                    <button class="edit">Edit</button>
-                    <button class="delete">Delete</button>
+                    <button class="edit" class="edit" name="edit">Edit</button>
                     <br>
                     <br>
                 </div>
@@ -205,9 +197,7 @@
                                     Silver
                                     11,000 EGY</pre>
                     <button class="buy">Buy</button><br>
-                    <button class="add">Add</button>
-                    <button class="edit">Edit</button>
-                    <button class="delete">Delete</button>
+                    <button class="edit" class="edit" name="edit">Edit</button>
                     <br>
                     <br>
                 </div>
@@ -222,9 +212,7 @@
                                         Gray
                                         21,500 EGY</pre>
                     <button class="buy">Buy</button><br>
-                    <button class="add">Add</button>
-                    <button class="edit">Edit</button>
-                    <button class="delete">Delete</button>
+                    <button class="edit" class="edit" name="edit">Edit</button>
                     <br>
                     <br>
                 </div>

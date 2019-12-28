@@ -1,3 +1,6 @@
+<?php
+$admin = $_GET["admin"];
+?>
 <!DOCTYPE html>
 <html>
 
@@ -7,7 +10,29 @@
     <title>Samsung</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="Samsung.css" />
-    <script src="main.js"></script>
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script>
+          function gotodecrement(model)
+        {
+            var l="http://localhost:8080/project/IT_project/Mobiles/edit/edit.php?admin=<?php echo $admin;?> & model="+model;
+            console.log(l)
+            window.location.replace(l);
+        }
+        function gotobuy( model)
+        {
+            var l="http://localhost:8080/project/IT_project/Mobiles/Buy/Buy.php?admin=<?php echo $admin;?> & model="+model;
+            console.log(l)
+            window.location.replace(l);
+        }
+        $(document).ready(function() {
+            var x="<?php echo $admin?>";
+            if(x =="false")
+            {
+                $(".edit").hide();
+            }
+
+        });
+    </script>
 </head>
 
 <body>
@@ -30,10 +55,8 @@
                         6GB Ram , 128GB
                         Black
                         5,600 EGY</pre>
-                    <button class="buy">Buy</button><br>
-                    <button class="add">Add</button>
-                    <button class="edit">Edit</button>
-                    <button class="delete">Delete</button>
+                    <button class="buy" onclick="gotobuy('A70')">Buy</button><br>
+                    <button class="edit" class="edit" name="edit " onclick="gotodecrement('A70')">decrementby1</button>
                     <br>
                     <br>
                 </div>
@@ -48,10 +71,8 @@
                         12GB Ram , 256GB
                         Black
                         17,400 EGY</pre>
-                    <button class="buy">Buy</button><br>
-                    <button class="add">Add</button>
-                    <button class="edit">Edit</button>
-                    <button class="delete">Delete</button>
+                    <button class="buy" onclick="gotobuy('Note_10')">Buy</button><br>
+                    <button class="edit" class="edit" name="edit" onclick="gotodecrement('Note_10')">Edit</button>
                     <br>
                     <br>
                 </div>
@@ -66,11 +87,9 @@
                             2GB Ram , 32GB
                             Black
                             2,050 EGY</pre>
-                    <button class="buy">Buy</button><br>
-                    <button class="add">Add</button>
-                    <button class="edit">Edit</button>
-                    <button class="delete">Delete</button>
-                    <br>
+                    <button class="buy" onclick="gotobuy('A10S')">Buy</button><br>
+                    <button class="edit" class="edit" name="edit" onclick="gotodecrement('A10S')">Edit</button>
+                   <br>
                     <br>
                 </div>
             </td>
@@ -84,10 +103,8 @@
                                 4GB Ram , 64GB
                                 Black
                                 3,500 EGY</pre>
-                    <button class="buy">Buy</button><br>
-                    <button class="add">Add</button>
-                    <button class="edit">Edit</button>
-                    <button class="delete">Delete</button>
+                    <button class="buy" onclick="gotobuy('A30S')">Buy</button><br>
+                    <button class="edit" class="edit" name="edit"  onclick="gotodecrement('A30S')">Edit</button>
                     <br>
                     <br>
                 </div>
@@ -105,10 +122,8 @@
                             3GB Ram , 32GB
                             Blue
                             2,700 EGY</pre>
-                    <button class="buy">Buy</button><br>
-                    <button class="add">Add</button>
-                    <button class="edit">Edit</button>
-                    <button class="delete">Delete</button>
+                    <button class="buy" onclick="gotobuy('A20S')">Buy</button><br>
+                    <button class="edit" class="edit" name="edit"  onclick="gotodecrement('A20S')">Edit</button>
                     <br>
                     <br>
                 </div>
@@ -123,10 +138,8 @@
                                     2GB Ram , 32GB
                                     Blue
                                     2,050 EGY</pre>
-                    <button class="buy">Buy</button><br>
-                    <button class="add">Add</button>
-                    <button class="edit">Edit</button>
-                    <button class="delete">Delete</button>
+                    <button class="buy" onclick="gotobuy('A10S_Blue')">Buy</button><br>
+                    <button class="edit" class="edit" name="edit"  onclick="gotodecrement('A10S_Blue')">Edit</button>
                     <br>
                     <br>
                 </div>
@@ -141,10 +154,8 @@
                                 4GB Ram , 64GB
                                 White
                                 3,700 EGY</pre>
-                    <button class="buy">Buy</button><br>
-                    <button class="add">Add</button>
-                    <button class="edit">Edit</button>
-                    <button class="delete">Delete</button>
+                    <button class="buy" onclick="gotobuy('M30S')">Buy</button><br>
+                    <button class="edit" class="edit" name="edit" onclick="gotodecrement('M30S')">Edit</button>
                     <br>
                     <br>
                 </div>
@@ -159,10 +170,8 @@
                                     2GB Ram , 32GB
                                     Black, 10.1 inch
                                     4,400 EGY</pre>
-                    <button class="buy">Buy</button><br>
-                    <button class="add">Add</button>
-                    <button class="edit">Edit</button>
-                    <button class="delete">Delete</button>
+                    <button class="buy"  onclick="gotobuy('Tab_A10')">Buy</button><br>
+                    <button class="edit" class="edit" name="edit" onclick="gotodecrement('Tab_A10')">Edit</button>
                     <br>
                     <br>
                 </div>
@@ -179,10 +188,8 @@
                                 6GB Ram , 128GB
                                 Pink
                                 5,350 EGY</pre>
-                    <button class="buy">Buy</button><br>
-                    <button class="add">Add</button>
-                    <button class="edit">Edit</button>
-                    <button class="delete">Delete</button>
+                    <button class="buy" onclick="gotobuy('A51')"> Buy</button><br>
+                    <button class="edit" class="edit" name="edit" onclick="gotodecrement('A51')">Edit</button>
                     <br>
                     <br>
                 </div>
@@ -197,12 +204,10 @@
                                         8GB Ram , 128GB
                                         Gold
                                         7,650 EGY</pre>
-                    <button class="buy">Buy</button><br>
-                    <button class="add">Add</button>
-                    <button class="edit">Edit</button>
-                    <button class="delete">Delete</button>
-                    <br>
-                    <br>
+                    <button class="buy" onclick="gotobuy('A80')">Buy</button><br>
+                    <<button class="edit" class="edit" name="edit" onclick="gotodecrement('A80')">Edit</button>
+                        <br>
+                        <br>
                 </div>
             </td>
 
@@ -215,10 +220,8 @@
                                     6GB Ram , 128GB
                                     Black
                                     5,350 EGY</pre>
-                    <button class="buy">Buy</button><br>
-                    <button class="add">Add</button>
-                    <button class="edit">Edit</button>
-                    <button class="delete">Delete</button>
+                    <button class="buy"  onclick="gotobuy('A51_black')">Buy</button><br>
+                    <button class="edit" class="edit" name="edit"onclick="gotodecrement('A51_black')">Edit</button>
                     <br>
                     <br>
                 </div>
@@ -233,10 +236,8 @@
                                         6GB Ram , 128GB
                                         White
                                         5,350 EGY</pre>
-                    <button class="buy">Buy</button><br>
-                    <button class="add">Add</button>
-                    <button class="edit">Edit</button>
-                    <button class="delete">Delete</button>
+                    <button class="buy"  onclick="gotobuy('A51_white')">Buy</button><br>
+                    <button class="edit" class="edit" name="edit" onclick="gotodecrement('A51_white')">Edit</button>
                     <br>
                     <br>
                 </div>

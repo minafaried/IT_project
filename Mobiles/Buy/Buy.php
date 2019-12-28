@@ -1,30 +1,17 @@
 <?php
+$admin=$_GET["admin"];
+$model=$_GET["model"];
+$mail=$_GET["email"];
+$connectioni=new mysqli("localhost","root","","it");
+$q = "INSERT INTO buy(`email`,`model`) 
+VALUES ('$email','$mail')";
 
-$credit = $_POST["Credit"];
-$phone = $_POST["phone"];
+if ($connectioni->query($q) == TRUE) {
+    session_start();
+    header("Location:http://localhost:8080/project/IT_project/Home/home.php?email="+$mail+" $ admin="+$admin );
+} else {
+    header("Location:http://localhost:8080/project/IT_project/Home/home.php?email="+$mail+" $ admin="+$admin );
 
-//mysql_connect
-//mysql_select_db
-
-$q;
-
-$q = mysql_query("select * from user where '$credit' = Credit and '$phone' = phone");
-    if ($row = mysql_fetch_array($q))
-    {
-        session_start();
-        $_SESSION['Credit'] = $credit;
-        
-        echo "<script>
-        alert ('Buying done successfully');
-        window.location.href='Home.html';
-        </script>";
-    }
-    else{
-        echo "<script>
-        alert('Credit or Phone was incorrect');
-        window.location.href='Buy.html';
-        </script>";
-    }
-
+}
 
 ?>

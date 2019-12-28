@@ -1,28 +1,35 @@
 <?php
 
-$mail = $_POST["email"];
+// Grab User submitted information
+$email = $_POST["email"];
 $pass = $_POST["password"];
 
-//mysql_connect
-//mysql_select_db
+// Connect to the database
+$con = new mysqli("localhost", "root", "", "it");
+// Make sure we connected successfully
+if (!$con) {
+    die('Connection Failed' . $con);
+}
 
-$q;
 
-$q = mysql_query("select * from user where '$mail' = email and '$pass' = password");
-    if ($row = mysql_fetch_array($q))
-    {
-        session_start();
-        $_SESSION['email'] = $mail;
-        echo "<script>
-        window.location.href='Home.html';
-        </script>";
+$q = "SELECT `email`, `password`,`adminCode` FROM user WHERE `email` = '$email'";
+$result = $con->query($q);
+if ($result->num_rows > 0) {
+    // output data of each row
+    while ($row = $result->fetch_assoc()) {
+
+        if ($row["email"] == $email && $row["password"] == $pass) {
+            if ($row["adminCode"] == '2020') {
+
+                header("Location:http://localhost:8080/project/IT_project/Home/home.php?admin=true");
+            } else {
+                header("Location:http://localhost:8080/project/IT_project/Home/home.php?admin=false");
+            }
+        } else {
+            header("Location:http://localhost:8080/project/IT_project/login.html");
+        }
     }
-    else{
-        echo "<script>
-        alert('Usrname or password was incorrect');
-        window.location.href='index.html';
-        </script>";
-    }
+} else {
 
-
-?>
+    header("Location:http://localhost:8080/project/IT_project/login.html");
+}
