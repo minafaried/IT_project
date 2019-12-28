@@ -68,18 +68,20 @@ body{
     display: inline-block;
 }
 
-span{
-    color: white;
+button{
     font-size: 25px;
+    color: white;
+    background-color: transparent;
+    border: none;
     font-family: cursive;
 }
 
-.span1{
+.button1{
     position: absolute;
     left: 20%;
 }
 
-.span2{
+.button2{
     position: absolute;
     left:68%;
 }
