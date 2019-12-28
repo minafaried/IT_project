@@ -74,12 +74,17 @@ body{
     margin-left: -300px;
 }
 
-.buy{
+.buy , .add , .edit , .delete{
     font-size: 20px;
     width: 70px;
     border-radius: 10px;
     background-color: lavender;
+    margin-left: 5px;;
+}
+
+.buy{
     margin-left: 85px;
+    margin-bottom: 5px;;
 }
 
 table , td , tr{
