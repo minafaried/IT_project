@@ -21,9 +21,11 @@ if ($result->num_rows > 0) {
         if ($row["email"] == $email && $row["password"] == $pass) {
             if ($row["adminCode"] == '2020') {
 
-                header("Location:http://localhost:8080/project/IT_project/Home/home.php?admin=true");
+                $x="Location:http://localhost:8080/project/IT_project/Home/home.php?admin=true & email=".$email;
+                header($x);
             } else {
-                header("Location:http://localhost:8080/project/IT_project/Home/home.php?admin=false");
+                $x="Location:http://localhost:8080/project/IT_project/Home/home.php?admin=false & email=".$email;
+                header($x);
             }
         } else {
             header("Location:http://localhost:8080/project/IT_project/login.html");

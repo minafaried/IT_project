@@ -1,5 +1,6 @@
 <?php
 $admin = $_GET["admin"];
+$email=$_GET["email"];
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,13 +15,13 @@ $admin = $_GET["admin"];
     <script>
           function gotodecrement(model)
         {
-            var l="http://localhost:8080/project/IT_project/Mobiles/edit/edit.php?admin=<?php echo $admin;?> & model="+model;
+            var l="http://localhost:8080/project/IT_project/Mobiles/edit/edit.php?admin=<?php echo $admin;?> & model="+model+" & email=<?php echo $email;?>";
             console.log(l)
             window.location.replace(l);
         }
         function gotobuy( model)
         {
-            var l="http://localhost:8080/project/IT_project/Mobiles/Buy/Buy.php?admin=<?php echo $admin;?> & model="+model;
+            var l="http://localhost:8080/project/IT_project/Mobiles/Buy/Buy.php?admin=<?php echo $admin;?> & model="+model+" & email=<?php echo $email;?>";
             console.log(l)
             window.location.replace(l);
         }

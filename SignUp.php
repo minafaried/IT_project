@@ -12,8 +12,12 @@ VALUES ('$user_name','$email','$password','$phone','$admin_code')";
 if ($connectioni->query($q) == TRUE) {
     session_start();
     $_SESSION['username'] = $user_name;
-    header("Location:http://localhost:8080/project/IT_project/Home/home.php");
-} else {
+    if ($admin_code == '2020') {
+
+        header("Location:http://localhost:8080/project/IT_project/Home/home.php?admin=true & email="+$email);
+    } else {
+        header("Location:http://localhost:8080/project/IT_project/Home/home.php?admin=false & email="+$email);
+    }} else {
     header("Location:http://localhost:8080/project/IT_project/Sign-up.html");
 
 }

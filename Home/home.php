@@ -1,5 +1,6 @@
 <?php
 $admin=$_GET["admin"];
+$email=$_GET["email"];
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,13 +29,13 @@ $admin=$_GET["admin"];
             <div class="unit">
                 <img class="image" class="Apple" src="Apple.png">
                 <!-- <button type="submit" class="button1" name="Apple" id="Apple">Apple</button>-->
-                <a href="http://localhost:8080/project/IT_project/Mobiles/Apple/Apple.php?admin=<?php echo $admin;?>" style="text-decoration: none; color: white"><span class="span1">Apple</span></a>
+                <a href="http://localhost:8080/project/IT_project/Mobiles/Apple/Apple.php?admin=<?php echo $admin;?> & email=<?php echo $email;?>" style="text-decoration: none; color: white"><span class="span1">Apple</span></a>
             </div>
 
 
             <div class="unit">
                 <img class="image" src="Samsung.png">
-                 <a href="http://localhost:8080/project/IT_project/Mobiles/Samsung/Samsung.php?admin=<?php echo $admin;?>" style="text-decoration: none; color: white"><span class="span2">Samsung</span></a>
+                 <a href="http://localhost:8080/project/IT_project/Mobiles/Samsung/Samsung.php?admin=<?php echo $admin;?> & email=<?php echo $email;?>" style="text-decoration: none; color: white"><span class="span2">Samsung</span></a>
             </div>
 
             <br> <br> <br>
@@ -42,12 +43,12 @@ $admin=$_GET["admin"];
 
             <div class="unit">
                 <img class="image" src="Oppo.png">
-                <a href="http://localhost:8080/project/IT_project/Mobiles/Oppo/Oppo.php?admin=<?php echo $admin;?>" style="text-decoration: none; color: white"><span class="span2">Oppo</span></a>
+                <a href="http://localhost:8080/project/IT_project/Mobiles/Oppo/Oppo.php?admin=<?php echo $admin;?> & email=<?php echo $email;?>" style="text-decoration: none; color: white"><span class="span2">Oppo</span></a>
             </div>
 
             <div class="unit">
                 <img class="image" src="Huawei.PNG">
-                <a href="http://localhost:8080/project/IT_project/Mobiles/Huawei/Huawei.php?admin=<?php echo $admin;?>" style="text-decoration: none; color: white"><span class="span2">Huawei</span></a>
+                <a href="http://localhost:8080/project/IT_project/Mobiles/Huawei/Huawei.php?admin=<?php echo $admin;?> & email=<?php echo $email;?>" style="text-decoration: none; color: white"><span class="span2">Huawei</span></a>
             </div>
 
 
