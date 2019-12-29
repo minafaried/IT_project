@@ -1,5 +1,6 @@
 <?php
 $admin=$_GET["admin"];
+$email=$_GET["email"];
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,13 +13,34 @@ $admin=$_GET["admin"];
     <link rel="stylesheet" type="text/css" media="screen" href="Apple.css" />
     <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
     <script>
+        /*$(document).ready(function() {
+            var x="<?php echo $admin?>";
+            if(x =="false")
+            {
+                $(".edit").hide();
+            }
+        });*/
+        function gotodecrement(model)
+        {
+            var l="http://localhost:8080/project/IT_project/Mobiles/edit/edit.php?admin=<?php echo $admin;?> & model="+model+" & email=<?php echo $email;?>";
+            console.log(l)
+            window.location.replace(l);
+        }
+        function gotobuy( model)
+        {
+            var l="http://localhost:8080/project/IT_project/Mobiles/Buy/Buy.php?admin=<?php echo $admin;?> & model="+model+" & email=<?php echo $email;?>";
+            console.log(l)
+            window.location.replace(l);
+        }
         $(document).ready(function() {
             var x="<?php echo $admin?>";
             if(x =="false")
             {
                 $(".edit").hide();
             }
+
         });
+        
     </script>
 </head>
 
@@ -41,8 +63,8 @@ $admin=$_GET["admin"];
                         256 Gigabyte
                         Gray
                         26,000 EGY</pre>
-                    <button class="buy">Buy</button><br>
-                    <button class="edit" class="edit" name="edit">Edit</button>
+                    <button class="buy" onclick="gotobuy('11_Pro_256')">Buy</button><br>
+                    <button class="edit" class="edit" name="edit " onclick="gotodecrement('11_Pro_256')">decrementby1</button>
                     <br>
                     <br>
                 </div>
@@ -56,8 +78,8 @@ $admin=$_GET["admin"];
                         64 Gigabyte
                         Gray
                         18,500 EGY</pre>
-                    <button class="buy">Buy</button><br>
-                    <button class="edit" class="edit" name="edit">Edit</button>
+                    <button class="buy" onclick="gotobuy('XS')">Buy</button><br>
+                    <button class="edit" class="edit" name="edit " onclick="gotodecrement('XS')">decrementby1</button>
                     <br>
                     <br>
                 </div>
@@ -71,8 +93,8 @@ $admin=$_GET["admin"];
                             128 Gigabyte
                             Black
                             12,800 EGY</pre>
-                    <button class="buy">Buy</button><br>
-                    <button class="edit" class="edit" name="edit">Edit</button>
+                    <button class="buy" onclick="gotobuy('XR')">Buy</button><br>
+                    <button class="edit" class="edit" name="edit " onclick="gotodecrement('XR')">decrementby1</button>
                     <br>
                     <br>
                 </div>
@@ -86,8 +108,8 @@ $admin=$_GET["admin"];
                                 32 Gigabyte
                                 Gray
                                 5,900 EGY</pre>
-                    <button class="buy">Buy</button><br>
-                    <button class="edit" class="edit" name="edit">Edit</button>
+                    <button class="buy" onclick="gotobuy('6S')" >Buy</button><br>
+                    <button class="edit" class="edit" name="edit " onclick="gotodecrement('6S')">decrementby1</button>
                     <br>
                     <br>
                 </div>
@@ -104,8 +126,8 @@ $admin=$_GET["admin"];
                             64 Gigabyte
                             Gray
                             11,000 EGY</pre>
-                    <button class="buy">Buy</button><br>
-                    <button class="edit" class="edit" name="edit">Edit</button>
+                    <button class="buy" onclick="gotobuy('8_Plus_Gray')">Buy</button><br>
+                    <button class="edit" class="edit" name="edit " onclick="gotodecrement('8_Plus_Gray')">decrementby1</button>
                     <br>
                     <br>
                 </div>
@@ -119,8 +141,8 @@ $admin=$_GET["admin"];
                                     64 Gigabyte
                                     Gold
                                     11,000 EGY</pre>
-                    <button class="buy">Buy</button><br>
-                    <button class="edit" class="edit" name="edit">Edit</button>
+                    <button class="buy" onclick="gotobuy('8_Plus_Gold')" >Buy</button><br>
+                    <button class="edit" class="edit" name="edit " onclick="gotodecrement('8_Plus_Gold')">decrementby1</button>
                     <br>
                     <br>
                 </div>
@@ -134,8 +156,8 @@ $admin=$_GET["admin"];
                                 32 Gigabyte
                                 Black
                                 7,700 EGY</pre>
-                    <button class="buy">Buy</button><br>
-                    <button class="edit" class="edit" name="edit">Edit</button>
+                    <button class="buy" onclick="gotobuy('7')">Buy</button><br>
+                    <button class="edit" class="edit" name="edit " onclick="gotodecrement('7')">decrementby1</button>
                     <br>
                     <br>
                 </div>
@@ -149,8 +171,8 @@ $admin=$_GET["admin"];
                                     32 Gigabyte
                                     Gold
                                     4,700 EGY</pre>
-                    <button class="buy">Buy</button><br>
-                    <button class="edit" class="edit" name="edit">Edit</button>
+                    <button class="buy" onclick="gotobuy('6')">Buy</button><br>
+                    <button class="edit" class="edit" name="edit " onclick="gotodecrement('6')">decrementby1</button>
                     <br>
                     <br>
                 </div>
@@ -166,8 +188,8 @@ $admin=$_GET["admin"];
                                 32 Gigabyte
                                 Gray
                                 6,800 EGY</pre>
-                    <button class="buy">Buy</button><br>
-                    <button class="edit" class="edit" name="edit">Edit</button>
+                    <button class="buy" onclick="gotobuy('6S_Plus_Gray')">Buy</button><br>
+                    <button class="edit" class="edit" name="edit " onclick="gotodecrement('6S_Plus_Gray')">decrementby1</button>
                     <br>
                     <br>
                 </div>
@@ -181,8 +203,8 @@ $admin=$_GET["admin"];
                                         32 Gigabyte
                                         Gold
                                         6,800 EGY</pre>
-                    <button class="buy">Buy</button><br>
-                    <button class="edit" class="edit" name="edit">Edit</button>
+                    <button class="buy" onclick="gotobuy('6S_Plus_Gold')" >Buy</button><br>
+                    <button class="edit" class="edit" name="edit " onclick="gotodecrement('6S_Plus_Gold')">decrementby1</button>
                     <br>
                     <br>
                 </div>
@@ -196,8 +218,8 @@ $admin=$_GET["admin"];
                                     64 Gigabyte
                                     Silver
                                     11,000 EGY</pre>
-                    <button class="buy">Buy</button><br>
-                    <button class="edit" class="edit" name="edit">Edit</button>
+                    <button class="buy" onclick="gotobuy('8_Plus_Silver')" >Buy</button><br>
+                    <button class="edit" class="edit" name="edit " onclick="gotodecrement('8_Plus_Silver')">decrementby1</button>
                     <br>
                     <br>
                 </div>
@@ -211,8 +233,8 @@ $admin=$_GET["admin"];
                                         64 Gigabyte
                                         Gray
                                         21,500 EGY</pre>
-                    <button class="buy">Buy</button><br>
-                    <button class="edit" class="edit" name="edit">Edit</button>
+                    <button class="buy" onclick="gotobuy('11_Pro_64')" >Buy</button><br>
+                    <button class="edit" class="edit" name="edit " onclick="gotodecrement('11_Pro_64')">decrementby1</button>
                     <br>
                     <br>
                 </div>
