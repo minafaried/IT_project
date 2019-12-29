@@ -25,7 +25,7 @@
     </div>
 
     <div class="SignUp">
-        <form class="sign-up" name="sign-up" action="SignUp.php" method="POST" id="sign-up" onsubmit="return validatesignup()">
+        <form class="sign-up" name="sign-up" action="Location:http://localhost:8080/project/IT_project/SignUp.php" method="POST" id="sign-up" onsubmit="return validatesignup()">
             <fieldset>
                 <legend>Sign-up form</legend>
                 <label class="label">Username</label>
@@ -43,6 +43,9 @@
                 <label class="label">Phone</label>
                 <input class="input" type="text" name="phone" placeholder="Type your Phone number" id="phone">
                 <div id="phoneerror" class="error"></div>
+                <br>
+                <label class="label">Admin Code</label>
+                <input class="input" type="text" name="adminCode" placeholder="Type your Admin code" id="adminCode">
                 <br>
                 <input class="submit" type="submit" value="Sign Up">
             </fieldset>

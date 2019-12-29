@@ -13,7 +13,7 @@ $counter=$counter-1;
 $q = "UPDATE  mobile Set counter='$counter' where name='$model'";
 
 $connectioni->query($q);
-    $x="Location:http://localhost:8080/project/IT_project/Home/home.php?admin=".$admin." & email=".$email;
+    $x="Location:http://localhost:8080/project/IT_project/Home/home.php?admin=".$admin."&email=".$email;
     header($x );
 }
 ?>

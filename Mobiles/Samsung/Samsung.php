@@ -10,29 +10,38 @@ $email=$_GET["email"];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Samsung</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="Samsung.css" />
-    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/project/IT_project/Mobiles/Samsung/samsungcss.css"/>
+    <script type="text/javascript" src="http://localhost:8080/project/IT_project/Mobiles/Samsung/jquery-3.4.1.min.js"></script>
     <script>
+        $(document).ready(function() {
+            var x="<?php echo $admin?>";
+            console.log(x);
+            if(x ==="false")
+            {
+                $(".edit").hide();
+            }
+            else if (x === "true")
+                $(".buy").hide();
+
+        });
+        function gotoincrement(model)
+        {
+            var l="http://localhost:8080/project/IT_project/Mobiles/edit/incrementby1.php?admin=<?php echo $admin;?>&model="+model+"&email=<?php echo $email;?>";
+            console.log(l)
+            window.location.replace(l);
+        }
           function gotodecrement(model)
         {
-            var l="http://localhost:8080/project/IT_project/Mobiles/edit/edit.php?admin=<?php echo $admin;?> & model="+model+" & email=<?php echo $email;?>";
+            var l="http://localhost:8080/project/IT_project/Mobiles/edit/decrementby1.php?admin=<?php echo $admin;?>&model="+model+"&email=<?php echo $email;?>";
             console.log(l)
             window.location.replace(l);
         }
         function gotobuy( model)
         {
-            var l="http://localhost:8080/project/IT_project/Mobiles/Buy/Buy.php?admin=<?php echo $admin;?> & model="+model+" & email=<?php echo $email;?>";
+            var l="http://localhost:8080/project/IT_project/Mobiles/Buy/Buy.php?admin=<?php echo $admin;?>&model="+model+"&email=<?php echo $email;?>";
             console.log(l)
             window.location.replace(l);
         }
-        $(document).ready(function() {
-            var x="<?php echo $admin?>";
-            if(x =="false")
-            {
-                $(".edit").hide();
-            }
-
-        });
     </script>
 </head>
 
@@ -57,7 +66,9 @@ $email=$_GET["email"];
                         Black
                         5,600 EGY</pre>
                     <button class="buy" onclick="gotobuy('A70')">Buy</button><br>
-                    <button class="edit" class="edit" name="edit " onclick="gotodecrement('A70')">decrementby1</button>
+                    <button class="edit" onclick="gotodecrement('A70')">decrementby1</button>
+                    <button class="edit" onclick="gotoincrement('A70')">incrementby1</button>
+
                     <br>
                     <br>
                 </div>
@@ -73,7 +84,9 @@ $email=$_GET["email"];
                         Black
                         17,400 EGY</pre>
                     <button class="buy" onclick="gotobuy('Note_10')">Buy</button><br>
-                    <button class="edit" class="edit" name="edit" onclick="gotodecrement('Note_10')">Edit</button>
+                    <button class="edit" name="edit" onclick="gotodecrement('Note_10')">decrementby1</button>
+                    <button class="edit" name="edit " onclick="gotoincrement('Note_10')">incrementby1</button>
+
                     <br>
                     <br>
                 </div>
@@ -89,7 +102,9 @@ $email=$_GET["email"];
                             Black
                             2,050 EGY</pre>
                     <button class="buy" onclick="gotobuy('A10S')">Buy</button><br>
-                    <button class="edit" class="edit" name="edit" onclick="gotodecrement('A10S')">Edit</button>
+                    <button class="edit" name="edit" onclick="gotodecrement('A10S')">decrementby1</button>
+                    <button class="edit" name="edit " onclick="gotoincrement('A10S')">incrementby1</button>
+
                    <br>
                     <br>
                 </div>
@@ -105,7 +120,9 @@ $email=$_GET["email"];
                                 Black
                                 3,500 EGY</pre>
                     <button class="buy" onclick="gotobuy('A30S')">Buy</button><br>
-                    <button class="edit" class="edit" name="edit"  onclick="gotodecrement('A30S')">Edit</button>
+                    <button class="edit" name="edit"  onclick="gotodecrement('A30S')">decrementby1</button>
+                    <button class="edit" name="edit " onclick="gotoincrement('A30S')">incrementby1</button>
+
                     <br>
                     <br>
                 </div>
@@ -124,7 +141,10 @@ $email=$_GET["email"];
                             Blue
                             2,700 EGY</pre>
                     <button class="buy" onclick="gotobuy('A20S')">Buy</button><br>
-                    <button class="edit" class="edit" name="edit"  onclick="gotodecrement('A20S')">Edit</button>
+                    <button class="edit" name="edit"  onclick="gotodecrement('A20S')">decrementby1</button>
+                    <button class="edit" name="edit " onclick="gotoincrement('A20S')">incrementby1</button>
+
+
                     <br>
                     <br>
                 </div>
@@ -140,7 +160,9 @@ $email=$_GET["email"];
                                     Blue
                                     2,050 EGY</pre>
                     <button class="buy" onclick="gotobuy('A10S_Blue')">Buy</button><br>
-                    <button class="edit" class="edit" name="edit"  onclick="gotodecrement('A10S_Blue')">Edit</button>
+                    <button class="edit" name="edit"  onclick="gotodecrement('A10S_Blue')">decrementby1</button>
+                    <button class="edit" name="edit " onclick="gotoincrement('A10S_Blue')">incrementby1</button>
+
                     <br>
                     <br>
                 </div>
@@ -156,7 +178,9 @@ $email=$_GET["email"];
                                 White
                                 3,700 EGY</pre>
                     <button class="buy" onclick="gotobuy('M30S')">Buy</button><br>
-                    <button class="edit" class="edit" name="edit" onclick="gotodecrement('M30S')">Edit</button>
+                    <button class="edit" name="edit" onclick="gotodecrement('M30S')">decrementby1</button>
+                    <button class="edit" name="edit " onclick="gotoincrement('M30S')">incrementby1</button>
+
                     <br>
                     <br>
                 </div>
@@ -172,7 +196,9 @@ $email=$_GET["email"];
                                     Black, 10.1 inch
                                     4,400 EGY</pre>
                     <button class="buy"  onclick="gotobuy('Tab_A10')">Buy</button><br>
-                    <button class="edit" class="edit" name="edit" onclick="gotodecrement('Tab_A10')">Edit</button>
+                    <button class="edit" name="edit" onclick="gotodecrement('Tab_A10')">decrementby1</button>
+                    <button class="edit" name="edit " onclick="gotoincrement('Tab_A10')">incrementby1</button>
+
                     <br>
                     <br>
                 </div>
@@ -190,7 +216,9 @@ $email=$_GET["email"];
                                 Pink
                                 5,350 EGY</pre>
                     <button class="buy" onclick="gotobuy('A51')"> Buy</button><br>
-                    <button class="edit" class="edit" name="edit" onclick="gotodecrement('A51')">Edit</button>
+                    <button  class="edit" name="edit" onclick="gotodecrement('A51')">decrementby1</button>
+                    <button  class="edit" name="edit " onclick="gotoincrement('A51')">incrementby1</button>
+
                     <br>
                     <br>
                 </div>
@@ -206,7 +234,9 @@ $email=$_GET["email"];
                                         Gold
                                         7,650 EGY</pre>
                     <button class="buy" onclick="gotobuy('A80')">Buy</button><br>
-                    <<button class="edit" class="edit" name="edit" onclick="gotodecrement('A80')">Edit</button>
+                    <<button class="edit" name="edit" onclick="gotodecrement('A80')">decrementby1</button>
+                    <button  class="edit" name="edit " onclick="gotoincrement('A80')">incrementby1</button>
+
                         <br>
                         <br>
                 </div>
@@ -222,7 +252,9 @@ $email=$_GET["email"];
                                     Black
                                     5,350 EGY</pre>
                     <button class="buy"  onclick="gotobuy('A51_black')">Buy</button><br>
-                    <button class="edit" class="edit" name="edit"onclick="gotodecrement('A51_black')">Edit</button>
+                    <button  class="edit" name="edit"onclick="gotodecrement('A51_black')">decrementby1</button>
+                    <button  class="edit" name="edit " onclick="gotoincrement('A51_black')">incrementby1</button>
+
                     <br>
                     <br>
                 </div>
@@ -238,7 +270,9 @@ $email=$_GET["email"];
                                         White
                                         5,350 EGY</pre>
                     <button class="buy"  onclick="gotobuy('A51_white')">Buy</button><br>
-                    <button class="edit" class="edit" name="edit" onclick="gotodecrement('A51_white')">Edit</button>
+                    <button  class = "edit" onclick="gotodecrement('A51_white')">decrementby1</button>
+                    <button  class = "edit" onclick="gotoincrement('A51_white')">incrementby1</button>
+
                     <br>
                     <br>
                 </div>

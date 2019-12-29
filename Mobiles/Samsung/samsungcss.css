@@ -1,13 +1,12 @@
-body{
-
-    background: url("samsung-logo-background-1920x1080-78557.jpg") no-repeat center center fixed; 
+body {
+    background: url("samsung-logo-background-1920x1080-78557.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 
-.h1{
+.h1 {
     position: absolute;
     left: 7%;
     top: 2%;
@@ -27,7 +26,7 @@ body{
     border-radius: 10px;
     position: fixed;
 }
-  
+
 .topnav a {
     float: left;
     color: #f2f2f2;
@@ -40,59 +39,68 @@ body{
     right: 5%;
     width: 50px;
 }
-  
+
 .topnav a:hover {
     background-color: #ddd;
     color: black;
-    
 }
-  
+
 .topnav a.active {
     background-color: blue;
     color: white;
 }
 
-.images{
+.images {
     width: 250px;
     height: 250px;
 }
 
-.description1 , .description2 , .description3{
+.description1,
+.description2,
+.description3 {
     font-size: 20px;
     color: white;
 }
 
-.description1{
+.description1 {
     margin-left: -200px;
 }
 
-.description2{
+.description2 {
     margin-left: -250px;
 }
 
-.description3{
+.description3 {
     margin-left: -300px;
 }
 
-.buy , .add , .edit , .delete{
+.buy {
     font-size: 20px;
     width: 70px;
     border-radius: 10px;
     background-color: lavender;
-    margin-left: 5px;;
-}
-
-.buy{
+    margin-left: 5px;
     margin-left: 85px;
-    margin-bottom: 5px;;
+    margin-bottom: 5px;
 }
 
-table , td , tr{
+.edit {
+    width: 100px;
+    border-radius: 7px;
+    height: 20px;
+    background-color: white;
+    margin: 10px;
+    color: red;
+}
+
+table,
+td,
+tr {
     margin: 40px;
     padding: 10px;
 }
 
-table{
+table {
     position: absolute;
     top: 17%;
     left: 15%;
