@@ -1,5 +1,6 @@
 <?php
 $admin=$_GET["admin"];
+$email=$_GET["email"];
 ?>
 <!DOCTYPE html>
 <html>
